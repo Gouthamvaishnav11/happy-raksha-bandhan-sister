@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #ff6f61;
+    animation: fadeIn 2s ease-in-out infinite alternate;
+}
+
+.images-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 30px;
+}
+
+.sister-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+}
+
+.sister-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.rakhi-frame {
+    display: inline-block;
+    margin: 30px;
+    position: relative;
+}
+
+.rotating-rakhi {
+    width: 150px;
+    animation: rotateRakhi 5s linear infinite;
+}
+
+@keyframes rotateRakhi {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+p {
+    font-size: 1.5em;
+    color: #ff6f61;
+    margin-top: 30px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
